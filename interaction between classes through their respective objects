@@ -1,0 +1,25 @@
+class student:
+  def __init__(self,name):
+    self.name=name
+    self.d={}
+    self.d["cordinator"]=self.name
+    print("welcome {}".format(self.name))
+  def enter_new_student(self,name,age):
+    self.d[name]=age
+  def check_for_student(self,name):
+    c=self.d.keys()
+    if name in c:
+      print("student exist")
+    else:
+      print("student not found")
+class mystudent:
+  def __init__(self,name):
+    self.name=name
+    name=[]
+    name.append(self.name)
+s=student("bharat")
+s.enter_new_student("rahul",20)
+s.enter_new_student("ravi",21)
+m=mystudent("sharat")
+s.check_for_student("rahul")
+s.check_for_student(m)
